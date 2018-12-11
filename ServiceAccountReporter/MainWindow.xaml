@@ -1,0 +1,27 @@
+﻿<Window x:Class="ServiceAccountReporter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ServiceAccountReporter"
+        mc:Ignorable="d"
+        Title="Service Account Reporter" Height="514.151" Width="800.472">
+    <Grid>
+        <Button x:Name="bttnQueryAD" Content="Query AD" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <DataGrid x:Name="dataGridAccounts" Margin="10,35,10,46" CanUserAddRows="False"/>
+        <TextBox x:Name="TextBox1" HorizontalAlignment="Left" Height="23" Margin="208,7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="191" TextChanged="TextBox1_TextChanged"/>
+        <Label Content="Filter:" HorizontalAlignment="Left" Margin="164,4,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="BttnExport" VerticalAlignment="Top" Margin="0,5,12,0" IsEnabled="False" Click="BttnExport_Click" HorizontalAlignment="Right" Width="28">
+            <Image Source="Excel-icon.png"></Image>
+        </Button>
+        <DockPanel>
+            <StatusBar DockPanel.Dock="Bottom" Height="36" VerticalAlignment="Bottom">
+                <StatusBarItem DockPanel.Dock="Left">
+                    <Label x:Name="lblStatus" Content=""/>
+                </StatusBarItem>
+            </StatusBar>
+            
+        </DockPanel>
+    </Grid>
+
+</Window>
